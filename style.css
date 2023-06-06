@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    top: 0;
+    left: 0;
+}
+
+.header-table  {
+    width: 50%;
+}
+
+#main table, td, th {
+    border: 1px solid #333;
+    border-collapse: collapse;
+}
+
+#main td, th {
+    text-align: center;
+}
+
+#main-add-product {
+    display: flex;
+    justify-content: center;
+}
+
+#main .delete-section {
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #333;
+    font-size: large;
+    padding: 2px;
+    background-color: aliceblue;
+}
+
+#main .edit-section {
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #333;
+    font-size: large;
+    padding: 2px;
+    background-color: aliceblue;
+    margin-top: 20px;
+}
+
+#main .margin-edit {
+    margin-top: 20px;
+}
+
+#main .delete-section:hover {
+    background-color: orange;
+}
+
+#main .edit-section:hover {
+    background-color: orange;
+}
+
+#add-product {
+    border: 2px solid #333;
+    display: inline-block;
+    width: 50%;
+    padding-top: 15px;
+    padding-left: 19px;
+}
+
+#add-product label {
+    font-weight: 900;
+    margin-right: 50px;
+}
+
+#add-product label, input {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+#add-product .space {
+    margin-right: 110px;
+}
+
+#add-product #submit {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 270px;
+}
+
+#add-product #submit:hover {
+    background-color: orange;
+}
+
+#index-main {
+    display: block;
+    justify-content: center;
+}
+
+.btn-product {
+    margin-left: 450px;
+    margin-top: 20px;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #333;
+    display: inline-block;
+}
+
+.btn-product:hover {
+    background-color: orange;
+}
+
+#index-main #body {
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #333;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#body:hover {
+    background-color: orange;
+}
