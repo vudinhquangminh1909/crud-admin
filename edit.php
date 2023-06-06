@@ -2,7 +2,7 @@
     include 'connect.php';
     $this_id = $_GET['this_id'];
 
-    $sql = "SELECT * FROM  sanpham WHERE id = '$this_id'";
+    $sql = "SELECT * FROM  sanpham WHERE id =".$this_id;
     $query = mysqli_query($conn, $sql);
 
     $row = mysqli_fetch_assoc($query);
@@ -16,13 +16,15 @@
         $image_tmp_name = $_FILES['img']['tmp_name'];
 
         $sql = "UPDATE sanpham SET name = '$name', image = '$image',
-        price = '$price', warranty = '$warranty' WHERE id = '$this_id'";
+        price = '$price', warranty = '$warranty' WHERE id =".$this_id;
 
         mysqli_query($conn, $sql);
 
         move_uploaded_file($image_tmp_name, 'img/img-product/'.$image);
 
-        header ('location: product');
+        header ('location: product.php');
+
+        echo ("Sửa sản phẩm thành công");
     }
 ?>
 
@@ -39,7 +41,7 @@
 
 <body>
     <div id="main-add-product">
-        <form id="add-product" action="add-product.php" method="post" enctype="multipart/form-data">
+        <form id="add-product" method="post" enctype="multipart/form-data">
             <label class="space" for="">Tên sản phẩm:</label>
             <input type="text" name="name" id="" value="<?php echo $row['name']; ?>">
             </br>

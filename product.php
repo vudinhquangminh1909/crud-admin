@@ -54,6 +54,7 @@
         </table>
     </div>
     <li class="btn-product"><a href="add-product.php">Thêm sản phẩm</a></li>
+    <li class="btn-product"><a href="index.php">Trang chủ</a></li>
 </body>
 
 </html>

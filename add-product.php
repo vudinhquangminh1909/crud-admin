@@ -11,14 +11,16 @@
 
         $warranty = $_POST['warranty'];
 
-        $sql = "INSERT INTO sanpham(name, image, price, warranty) 
+        $sql = "INSERT INTO sanpham(name, image, price, warranty)
         VALUE('$name', '$image', '$price', '$warranty')";
 
         mysqli_query($conn, $sql);
 
-        move_uploaded_file($image_tmp_name, 'img/img-product/'. $image);
+        move_uploaded_file($image_tmp_name, 'img/img-product/'.$image);
 
         echo ("Chúc mừng bạn đã thêm sản phẩm thành công");
+
+        header ('location: product.php');
     }
 ?>
 
@@ -54,6 +56,7 @@
             <button id="submit" name="btn">Thêm sản phẩm</button>
         </form>
     </div>
+    <a href="index.php">Trang chủ</a>
 </body>
 
 </html>
